@@ -1,0 +1,338 @@
+html,
+body,
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#paneDiv {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+/* navigation menu */
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    left: 10%;
+    border-bottom: 3px solid #a3a3a3;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    z-index: 100;
+}
+
+
+
+.nav-logo p{
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    color: #a8a8a8;
+}
+
+.highlight{
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#f37c37, #271408);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-menu ul{
+    display: flex;
+}
+
+.nav-menu ul li{
+    list-style-type: none;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
+    font-weight: 400;
+    color: #ffffff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+
+#nav-icon{
+    padding-right: 10px;
+}
+    
+.nav-menu ul li a:hover{
+    border-bottom: 2px solid #f37c37;
+}
+
+
+
+/* close button for nav menu */
+.close-btn {
+    font-size: 30px; /* Adjust size as needed */
+    color: #ffffff; /* Adjust color as needed */
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+/* nav menu */     
+.nav-menu.responsive{
+    right: 0;
+    
+}
+.nav-menu{
+    position: fixed;
+    right: -100%;
+    top: 1px;
+    display: flex;
+    justify-content: center;
+    background: rgba(26, 26, 26, 0.452);
+    width: 27%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    transition: .7s;
+}
+.nav-menu ul{
+    flex-direction: column;
+    text-align: justify;
+}
+
+/* nav menu button */
+.nav-menu-btn{
+    display: block;
+}
+.nav-menu-btn i{
+    font-size: 25px;
+    color: #d6d6d6;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .7s;
+}
+.nav-menu-btn i:hover{
+    background: #f37c37;
+    color: #e2e2e2;
+}
+
+
+
+/* make nav menu responsive for phone screens */
+
+@media only screen and (max-width: 800px){
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        top: 100px;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(26, 26, 26, 0.452);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* main screen content  */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 40%;
+    backdrop-filter: blur(3px) saturate(20%);
+    border-radius: 20px;
+} 
+
+.content h1{
+    font-size: 160px;
+    margin-top: -30px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+
+}
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+
+.content h3{
+    position: absolute;
+    right: 90%;
+    font-size: 30px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #f37c37;
+    margin: 0;
+}
+
+.content a{
+    text-decoration: overline #f37c37;
+    color: #fff;
+    font-size: 24px;
+    margin-top: -150px;
+} 
+
+.exploreBtn{
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: none;
+    color: #fff;
+    background: none;
+    font-size: 16px;
+}
+
+.exploreBtn:hover{
+    background-color: #f37c37;
+}
+
+
+/* splash screen */
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    transition: 1s;
+}
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+} 
+
+
+/* explore data set list */
+
+#data-list-container {
+    /* Initially hidden; will be made visible by JavaScript when needed */
+    display: none;
+    column-count: 2;
+    margin-top: 20px;
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+}
+
+
+/* Styles for the list itself */
+#data-list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#data-list li {
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 0;
+    width: auto;
+    color: #fff;
+    border: none; /* Border for each item */
+    border-radius: 20px; /* Rounded corners for polish */
+    font-size: 30px;
+}
+
+#data-list li:hover {
+    background-color: #f37c37; 
+}
+
+
+/* Western Cape */
+#wc-content {
+    position: absolute; /* Or 'fixed' if you want it to stay in place on scroll */
+    left: 20px;
+    top: 200px; 
+    width: 39%; 
+    height: 60%; 
+    backdrop-filter: blur(3px) saturate(20%);
+    padding: 20px;
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+#wc-content h1{
+    font-size: 50px;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: underline #f37c37;
+}
+
+#wc-content p{
+    color: #fff;
+    font-size: 20px;
+}

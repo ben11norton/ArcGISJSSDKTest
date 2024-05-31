@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+  
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f3f3f3;
+}
+
+
+  /* navigation menu */
+
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    left: 10%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    z-index: 100;
+}
+
+
+
+.nav-menu ul{
+    display: flex;
+}
+
+.nav-menu ul li{
+    list-style-type: none;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
+    font-weight: 400;
+    color: #ffffff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+
+#nav-icon{
+    padding-right: 10px;
+}
+    
+a:hover{
+    border-bottom: 2px solid #f37c37;
+}
+
+
+
+/* close button for nav menu */
+.close-btn {
+    font-size: 30px; /* Adjust size as needed */
+    color: #ffffff; /* Adjust color as needed */
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+/* nav menu */     
+.nav-menu.responsive{
+    right: 0;
+    
+}
+.nav-menu{
+    position: fixed;
+    right: -100%;
+    top: 1px;
+    display: flex;
+    justify-content: center;
+    background: rgba(26, 26, 26, 0.452);
+    width: 27%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    transition: .7s;
+}
+.nav-menu ul{
+    flex-direction: column;
+    text-align: justify;
+}
+
+/* nav menu button */
+.nav-menu-btn{
+    display: block;
+}
+.nav-menu-btn i{
+    font-size: 25px;
+    color: #a3a3a3;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .7s;
+}
+.nav-menu-btn i:hover{
+    background: #f37c37;
+    color: #e2e2e2;
+}
+
+
+
+/* make nav menu responsive for phone screens */
+
+@media only screen and (max-width: 800px){
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        top: 100px;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(26, 26, 26, 0.452);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+  
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 100px;
+}
+
+   
+.search-bar {
+    padding: 20px;
+    background: #fff;
+}
+  
+.search-bar input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+  
+.templates {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    background: #fff;
+}
+  
+.template {
+    min-width: 200px;
+    margin-right: 20px;
+    background: #e7e7e7;
+    padding: 20px;
+    text-align: center;
+}
+  
+.documents {
+    flex-grow: 1;
+    background: #fff;
+}
+  
+.documents-header {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+  
+.documents-list {
+    padding: 20px;
+}
+  
+.document {
+    background: #e7e7e7;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+  

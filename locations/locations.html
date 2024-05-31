@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<hea<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+<title>Explore Locations</title>
+<link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="locations.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- nav menu -->
+<nav class="nav">
+
+    <div class="nav-menu" id="navMenu">
+        <span class="close-btn" onclick="myMenuFunction()">&times;</span>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-rocket" id="nav-icon"></i>Back to orbit</a></li>
+            <li><a href="/stellenbosch/stellenbosch.html"><i class="fas fa-heart" id="nav-icon"></i>Stellenbosch</a></li>
+            <li><a href="#"><i class="fas fa-book" id="nav-icon"></i>My Library</a></li>
+            <li><a href="#"><i class="fas fa-chart-bar" id="nav-icon"></i>Metrics</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog" id="nav-icon"></i>Settings</a></li>
+        </ul>
+    </div>
+    <div class="nav-menu-btn">
+        <i class="fa fa-bars" aria-hidden="true" onclick="myMenuFunction()"></i>
+    </div>
+</nav>
+
+<!-- locations body -->
+    <div class="container">
+        <div class="search-bar">
+            <input type="search" placeholder="Search for locations...">
+        </div>
+        <div class="templates">
+            <!-- Templates placeholders -->
+            <div class="template">Jonkershoek ET, Rainfall & Stream Gauges</div>
+            <div class="template">Template 1</div>
+            <div class="template">Template 2</div>
+            <!-- Add more as needed -->
+        </div>
+        <div class="documents">
+            <div class="documents-header">
+                <div class="title">Recent Projects</div>
+            </div>
+            <div class="documents-list">
+                <!-- Document placeholders -->
+                <div class="document">Protect The West Coast</div>
+                <div class="document">Flood return levels in the Western Cape</div>
+                <div class="document">Get this Web Page to actually work </div>
+                <!-- Add more as needed -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="locations.js"></script>
+</body>
+</html>
+
