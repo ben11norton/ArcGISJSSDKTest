@@ -186,6 +186,7 @@ body,
     width: 80%;
     height: 40%;
     backdrop-filter: blur(3px) saturate(20%);
+    background: rgba(26, 26, 26, 0.452);
     border-radius: 20px;
 } 
 
@@ -282,6 +283,7 @@ body,
     width: 30%; /* Or whatever width you prefer */
     height: 60%; /* Take full height of the viewport */
     backdrop-filter: blur(3px) saturate(20%);
+    background: rgba(26, 26, 26, 0.452);
     padding: 20px;
     border-radius: 20px;
     overflow-y: auto;
