@@ -183,6 +183,7 @@ body,
     width: 60%;
     height: 40%;
     backdrop-filter: blur(3px) saturate(20%);
+    background: rgba(26, 26, 26, 0.452);
     border-radius: 20px;
 } 
 
